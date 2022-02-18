@@ -1,0 +1,6 @@
+{%- assign stuff = site.data.stuff | sort: "current" -%}
+<section id="stuff" class="row">
+  {% for thing in stuff %}
+  <a href="{{ thing.url }}" data-current="{{ thing.current }}">{{ thing.title }}</a>
+  {%- endfor %}
+</section>
